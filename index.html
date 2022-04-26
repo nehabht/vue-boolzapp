@@ -18,10 +18,10 @@
         <div class="bottom"></div>
 
         <!-- app -->
-        <div class="app">
+        <div id="app" class="app">
             <div class="container d-flex pe-0">
                 <!-- sidebar -->
-                    <aside class="row d-flex">
+                    <aside class="row d-flex" >
                         <!-- user -->
                         <div class="col-12 user d-flex">
                             <div class="user">
@@ -60,6 +60,30 @@
                             </div>
                         </div>
 
+                        <!-- contatti -->
+
+                        <div class="contacts">
+                            <div class="col-12 contact d-flex justify-content-between " v-for="(user, index) in contacts" @click="activeChat = index ; visible = user" >
+                                <div class="d-flex ">
+                                    <div class="contact_profile d-flex justify-content-center align-items-center m-2">
+                                        <img class="contact_img" :src="'assets/img/avatar' + user.avatar + '.jpg'" alt="">
+                                    </div>
+        
+                                    <div class="d-flex flex-column pt-2">
+                                        <span>{{user.name}}</span>
+                                        <span class="" style="color: gray; font-size: 10px;">Ultimo messaggio inviato</span>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="last_msg_time mt-1">
+                                    <span class="" style="color: gray; font-size: 10px;">12:00</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                  
                 
 
 
@@ -71,9 +95,18 @@
                      <main class="open_chat d-flex flex-column justify-content-between ">
                          <!-- header -->
                         <div class="col-12 user d-flex ps-2">
-                            <div class="chat_open_user">
-                                <img class="profile" src="./assets/img/avatar_io.jpg" alt="">
-                                <span>Sofia</span>
+                            <div class="chat_open_user ">
+                                <div class="d-flex">
+                                    <img class="contact_img"src="./assets/img/avatar_1.jpg" alt="">
+                                     <div class="d-flex flex-column pt-2 ps-2">
+                                    <span>Michele</span>
+                                    <span class="" style="color: gray; font-size: 10px;">Ultimo accesso oggi alle 12:00</span>
+
+                                </div>
+
+                                </div>
+                                
+                               
                             </div>
                             
                             <div class="options pe-2">
@@ -84,7 +117,19 @@
                         </div>
 
                         <!-- messaggi -->
-                        <div class="chat"></div>
+                        <div class="chat">
+
+                            <div class="row">
+                                <div class="col-12 d-flex flex-column">
+                                    <div class="" v-for="(element,index) in contacts[activeChat].messages" :class="(element.status === 'sent') ? 'msg_sent' : 'msg_recieved'">
+                                        <span>{{ element.message}}</span>
+                                        <p class="text-end mt-1">{{ element.date }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
 
                         <!-- footer write msg -->
                         <div class="writing">
@@ -100,12 +145,7 @@
                                 <div class="col-1">
                                     <i class="fa-solid fa-microphone icon" style="color:gray"></i>
                                 </div>
-                                
-                                
-                                
                             </div>
-                            
-
                         </div>
                         
 
