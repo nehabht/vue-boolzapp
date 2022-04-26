@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-top-behind: #009688;
+    --bg-notifications: #8EDAFC;
+    --bg-icons: #B1B1B1;
+    --bg-mytexts: #D5F9BA;
+    --bg-bot-behind: #DCDBD2;
+    --bg-app: #EAEAEA;
+    --bg-chat-bottom: #F3EEEA;
+        
+}
+
+body{
+    background-color: tan;
+}
