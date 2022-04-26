@@ -63,13 +63,13 @@
                         <!-- contatti -->
 
                         <div class="contacts">
-                            <div class="col-12 contact d-flex justify-content-between " v-for="(user, index) in contacts" @click="activeChat = index ; visible = user" >
+                            <div class="col-12 contact d-flex justify-content-between " v-for="(user, index) in contacts" @click="activeChat = index ; visible = user" :class="{active : visible == user}"   >
                                 <div class="d-flex ">
                                     <div class="contact_profile d-flex justify-content-center align-items-center m-2">
                                         <img class="contact_img" :src="'assets/img/avatar' + user.avatar + '.jpg'" alt="">
                                     </div>
         
-                                    <div class="d-flex flex-column pt-2">
+                                    <div class="d-flex flex-column pt-2" >
                                         <span>{{user.name}}</span>
                                         <span class="" style="color: gray; font-size: 10px;">Ultimo messaggio inviato</span>
                                     </div>
@@ -97,9 +97,9 @@
                         <div class="col-12 user d-flex ps-2">
                             <div class="chat_open_user ">
                                 <div class="d-flex">
-                                    <img class="contact_img"src="./assets/img/avatar_1.jpg" alt="">
+                                    <img class="contact_img" :src="'assets/img/avatar' + contacts[activeChat].avatar + '.jpg'" alt="">
                                      <div class="d-flex flex-column pt-2 ps-2">
-                                    <span>Michele</span>
+                                    <span>{{contacts[activeChat].name}}</span>
                                     <span class="" style="color: gray; font-size: 10px;">Ultimo accesso oggi alle 12:00</span>
 
                                 </div>
@@ -120,10 +120,10 @@
                         <div class="chat">
 
                             <div class="row">
-                                <div class="col-12 d-flex flex-column">
-                                    <div class="" v-for="(element,index) in contacts[activeChat].messages" :class="(element.status === 'sent') ? 'msg_sent' : 'msg_recieved'">
+                                <div class="col-12 d-flex flex-column mt-4">
+                                    <div class="col-8 pt-2 mt-2 " v-for="(element,index) in contacts[activeChat].messages" :class="(element.status === 'sent') ? 'msg_sent' : 'msg_recieved'">
                                         <span>{{ element.message}}</span>
-                                        <p class="text-end mt-1">{{ element.date }}</p>
+                                        <div class="text-end mt-1">{{ element.date }}</div>
                                     </div>
                                 </div>
                             </div>

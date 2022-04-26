@@ -204,5 +204,42 @@ main{
 }
 
 
+.active{
+    background-color: #e9ebeb;
+}
+
+.chat span {
+    font-size: 13px;
+    color: rgba(41, 40, 40, 0.76);
+    
+}
+
+.msg_sent{
+    width: 35%;
+    align-self: flex-end;
+    background-color: var(--bg-mytexts);
+    border-radius: 10px;
+    padding: 3px 10px;
+}
+
+.msg_sent div{
+    font-size: 8px;
+}
+
+.msg_recieved{
+    width: 35%;
+    align-self: flex-start;
+    background-color: white;
+    border-radius: 10px;
+    padding: 3px 10px;
+    margin-left: 10%;
+
+}
+
+.msg_recieved div{
+    font-size: 8px;
+}
+
+
 
 
