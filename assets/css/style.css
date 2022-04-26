@@ -16,5 +16,153 @@
 }
 
 body{
-    background-color: tan;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    font-size: 12px;
 }
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+
+/* app background */
+
+.top{
+    background-color: var(--bg-top-behind);
+    height: 120px  ;
+}
+
+.bottom{
+    background-color: var(--bg-bot-behind);
+    height: calc( 100% - 120px); /* da sistemare*/
+}
+
+/* app */
+
+.app{
+    position: absolute;
+    background-color: whitesmoke;
+    height: 700px;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+}
+
+/* sidebar */
+
+
+.col-12{
+    height: 50px;
+
+}
+
+.bell_desktop{
+    background-color: var(--bg-notifications);
+}
+
+
+
+aside{
+    height: 100%;
+    background-color: var(--black);
+    width: 400px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto; 
+}
+
+
+.user {
+    background-color: var(--bg-app);
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.user>span{
+    margin-bottom: 2px;
+}
+
+.profile{
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    margin-top: 8px;
+    margin-left: -2px;
+    
+}
+
+.options{
+    font-size: 17px;
+    color: var(--bg-icons)
+}
+
+/* notification */
+
+.notifications{
+    height: 60px;
+    background-color: #8EDAFC;
+}
+
+.notification{
+    background-color: #f2fbff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.fa-bell-slash{
+    font-size: 15px;
+    margin-top: 15px;
+    margin-left: 15px;
+    color: #8EDAFC;
+}
+
+/* input search */
+
+.search{
+    height: 40px;
+    background-color: lightgrey;
+    
+}
+
+.form-control{
+    font-size: 10px;
+}
+
+
+main{
+    height: 100vh;
+    width: 100%;
+    background-color: pink;
+    margin-left: 12px;
+    background-image: url(/assets/img/mine.jpg);
+
+}
+
+.chat_open_user{
+    background-color: var(--bg-app);
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+
+/* footer write msg */
+
+.writing{
+    background-color: var(--bg-chat-bottom);
+    padding-top: 20px;
+    height: 70px;
+}
+
+.icon {
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+
