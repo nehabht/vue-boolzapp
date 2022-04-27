@@ -139,7 +139,9 @@
                                     
                                 </div>
                                 <div class="col-10">
-                                    <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="basic-addon1" 
+                                    v-model="newMsg" v-on:keyup.enter="addNewMsg(activeChat)"
+                                    >
 
                                 </div>
                                 <div class="col-1">
