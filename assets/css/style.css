@@ -48,7 +48,7 @@ body{
     display: flex;
     margin: 30px auto;
     contain: content;
-    background-color: var(--bg-app);
+
 
 }
 
