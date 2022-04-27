@@ -221,6 +221,7 @@ main{
 
 .msg_sent{
     width: 35%;
+    /* width: fit-content; */
     align-self: flex-end;
     background-color: var(--bg-mytexts);
     border-radius: 10px;
