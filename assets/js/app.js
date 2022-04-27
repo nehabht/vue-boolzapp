@@ -3,6 +3,7 @@ const app = new Vue({
     data: {
         activeChat : 0,
         newMsg: '',
+        search: '',
         
         contacts: [
             {
@@ -197,6 +198,14 @@ const app = new Vue({
 
 
 
+    },
+    computed:{
+        filteredContacts: function(){
+            return this.contacts.filter((user) => {
+                //filter è case sensitive quindi toLowerCase
+                return user.name.toLowerCase().match(this.search.toLowerCase());
+            })
+        }
     }
 })
 
@@ -219,3 +228,8 @@ messaggi relativi al contatto attivo all’interno del pannello della conversazi
 “enter” il testo viene aggiunto al thread sopra, come messaggio verde
 ● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
 un “ok” come risposta, che apparirà dopo 1 secondo. */
+
+/* Milestone 4
+● Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i
+contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo
+“mar” rimangono solo Marco e Martina) */
