@@ -183,6 +183,16 @@ const app = new Vue({
 
             this.contacts[i].messages.push(newFullMsg)
 
+            setTimeout(() => {
+                let msgRisposta = {
+                    date: '10/02/2020 17:00:01',
+                    message: 'ok',
+                    status: 'received',
+                }
+
+                this.contacts[i].messages.push(msgRisposta)
+            }, 1000)
+
         }
 
 
