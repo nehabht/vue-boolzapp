@@ -183,6 +183,7 @@ const app = new Vue({
             }
 
             this.contacts[i].messages.push(newFullMsg)
+            this.newMsg = ''
 
             setTimeout(() => {
                 let msgRisposta = {
