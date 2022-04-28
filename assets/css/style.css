@@ -30,20 +30,11 @@ body{
 
 /* app background */
 
-.top{
-    background-color: var(--bg-top-behind);
-    height: 100px  ;
-}
-
-.bottom{
-    background-color: var(--bg-bot-behind);
-    height: calc( 100% - 120px); /* da sistemare*/
-}
 
 /* app */
 
 .app{
-    height: 90vh;
+    /* height: 90vh; */
     width: 80%;
     display: flex;
     margin: 30px auto;
@@ -80,7 +71,7 @@ aside{
 }
 
 main{
-    height: 90vh;
+    /* height: 90vh; */
     width: 100%;
     background-color: pink;
     margin-left: 12px;

@@ -62,8 +62,8 @@
 
                         <!-- contatti -->
 
-                        <div class="contacts">
-                            <div class="col-12 contact d-flex justify-content-between " v-for="(user, index) in filteredContacts" @click="activeChat = index" :class="index === activeChat ? 'active' : ''"   >
+                        <div class="contacts" >
+                            <div class="col-12 contact d-flex justify-content-between " v-for="(user, index) in contacts"  @click="activeChat = index" :class=" [index === activeChat ? 'active' : '', (user.name.toLowerCase().match(search.toLowerCase())) ? '' : 'd-none', user.visible? '' : 'd-none' ]">
                                 <div class="d-flex ">
                                     <div class="contact_profile d-flex justify-content-center align-items-center m-2">
                                         <img class="contact_img" :src="'assets/img/avatar' + user.avatar + '.jpg'" alt="">
