@@ -227,6 +227,7 @@ main{
 }
 
 .msg_sent{
+    position: relative;
     width: 35%;
     /* width: fit-content; */
     align-self: flex-end;
@@ -241,6 +242,7 @@ main{
 }
 
 .msg_recieved{
+    position: relative;
     width: 35%;
     align-self: flex-start;
     background-color: white;
@@ -252,6 +254,22 @@ main{
 
 .msg_recieved div{
     font-size: 8px;
+}
+
+/* dropdown */
+
+.dropdown-content {
+    position: absolute;
+    width: 50px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.hide{
+    visibility: hidden;
 }
 
 

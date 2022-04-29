@@ -121,9 +121,21 @@
 
                             <div class="row">
                                 <div class="col-12 d-flex flex-column mt-4">
-                                    <div class="col-8 pt-2 mt-2 " v-for="(element,index) in contacts[activeChat].messages" :class="(element.status === 'sent') ? 'msg_sent' : 'msg_recieved'">
-                                        <span>{{ element.message}}</span>
-                                        <div class="text-end mt-1">{{ element.date }}</div>
+                                    <div id="msg_bubble" class="col-8 pt-2 mt-2" v-for="(element,index) in contacts[activeChat].messages" :class="(element.status === 'sent') ? 'msg_sent' : 'msg_recieved'">
+                                        <div id="eliminare_msg" > 
+                                            <span>{{ element.message}}</span>
+                                            <i class="fa-solid fa-chevron-down p-1 text-end" @click="mostraTendina"></i>
+                                            <div class="text-end mt-1">{{ element.date }}</div>
+
+                                            <!-- tendina -->
+                                            <div id="myDropdown" class="" >
+                                                
+                                                <p class="dropdown-content hide ">
+                                                    <a href="#home">info</a>
+                                                    <a href="#contact" @click="deleteMsg(index)">elimina</a>
+                                                </p>
+                                            </div>
+                                        </div> 
                                     </div>
                                 </div>
                             </div>

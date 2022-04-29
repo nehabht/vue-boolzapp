@@ -195,19 +195,31 @@ const app = new Vue({
                 this.contacts[i].messages.push(msgRisposta)
             }, 1000)
 
+        },
+
+        //funzione elimina messaggio
+        deleteMsg(i) {
+            this.contacts[this.activeChat].messages.splice(i,1);
+        },
+
+        //toggle tendina
+
+        mostraTendina(){
+            //console.log('tendina cliccata')
+            const element = document.querySelectorAll(".dropdown-content");
+
+				element.forEach(element => {
+					element.classList.toggle("hide");
+                })
+
         }
+
+
 
 
 
     },
-    computed:{
-        filteredContacts: function(){
-            return this.contacts.filter((user) => {
-                //filter è case sensitive quindi toLowerCase
-                return user.name.toLowerCase().match(this.search.toLowerCase());
-            })
-        }
-    }
+ 
 })
 
 
